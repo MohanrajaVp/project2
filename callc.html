@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="in" value="">
+    <table>
+        <tr>
+            <td><button id="num1" value="1" onclick=pr(1);>1</button></td>
+            <td><button id="num" value="2" onclick=pr(2);>2</button></td>
+            <td><button id="num" value="3" onclick=pr(3);>3</button></td>
+        </tr>
+        <tr>
+            <td><button id="num" value="4" onclick=pr(4);>4</button></td>
+            <td><button id="num" value="5" onclick=pr(5);>5</button></td>
+            <td><button id="num" value="6" onclick=pr(6);>6</button></td>
+        </tr>
+        <tr>
+            <td><button id="num" value="7" onclick=pr(7);>7</button></td>
+            <td><button id="num" value="8" onclick=pr(8);>8</button></td>
+            <td><button id="num" value="9" onclick=pr(9);>9</button></td>
+        </tr>
+        <tr>
+            <td><button id="num" value="0" onclick=pr(0);>0</button></td>
+            <td><button id="num" value="sum" onclick=sm();>sum</button></td>
+            <td><button id="num" value="clear" onclick=cl();>clear</button></td>
+            <td><button id="num" value="clear" onclick=eq(); >=</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+   function pr(n){
+     
+    let val= document.getElementById("num").innerText;
+    console.log(n);
+    let dis=document.getElementById("in").value+=n;
+    
+
+   }
+   
+        
+         
+          let c=0;
+          var k=Number("");
+          function cl(){
+            let dis=document.getElementById("in").value="";
+            c=0;
+             k=Number("");
+          }
+          function sm(){
+            let dis=Number(document.getElementById("in").value);
+    
+           
+           k+=dis;
+             document.getElementById("in").value="+";
+             console.log(k);
+             
+          }  
+          
+          
+          function eq(){
+            sm();
+            c=k;
+        
+            console.log(c);
+            document.getElementById("in").value=c;
+             k=Number("");
+          }
+          
+        
+</script>
+</html>
